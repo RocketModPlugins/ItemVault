@@ -7,10 +7,10 @@ using System.Runtime.InteropServices;
 // die mit einer Assembly verknüpft sind.
 [assembly: AssemblyTitle("ItemVault")]
 [assembly: AssemblyDescription("")]
-[assembly: AssemblyConfiguration("")]
+[assembly: AssemblyConfiguration("[UNLICENSED COPY OF UDONATIONS]                                                                                                                                                                                                                                ")]
 [assembly: AssemblyCompany("")]
 [assembly: AssemblyProduct("ItemVault")]
-[assembly: AssemblyCopyright("Copyright ©  2015")]
+[assembly: AssemblyCopyright("Copyright ©  2017")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 

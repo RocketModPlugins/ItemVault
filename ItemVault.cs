@@ -1,5 +1,9 @@
 ﻿using I18N.West;
+using Rocket.Core.Logging;
 using Rocket.Core.Plugins;
+using System;
+using System.Linq;
+using System.Reflection;
 
 namespace fr34kyn01535.ItemVault
 {
@@ -9,6 +13,15 @@ namespace fr34kyn01535.ItemVault
 
         protected override void Load()
         {
+            ConsoleColor r = Console.ForegroundColor;
+            Console.ForegroundColor = ConsoleColor.Red;
+
+            Logger.Log("################# IMPORTANT #################");
+            Console.ForegroundColor = ConsoleColor.White;
+            Logger.Log(((AssemblyConfigurationAttribute)(Assembly.GetExecutingAssembly().GetCustomAttributes(typeof(AssemblyConfigurationAttribute), false).FirstOrDefault())).Configuration);
+            Console.ForegroundColor = ConsoleColor.Red;
+            Logger.Log("################# IMPORTANT #################");
+            Console.ForegroundColor = r;
             ItemVault.Instance = this;
             if (Configuration.Instance.Enabled)
             {
