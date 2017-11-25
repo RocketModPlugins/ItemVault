@@ -4,6 +4,7 @@ using Rocket.Core.Plugins;
 using System;
 using System.Linq;
 using System.Reflection;
+using System.Text;
 
 namespace fr34kyn01535.ItemVault
 {
@@ -18,7 +19,7 @@ namespace fr34kyn01535.ItemVault
 
             Logger.Log("################# IMPORTANT #################");
             Console.ForegroundColor = ConsoleColor.White;
-            Logger.Log(((AssemblyConfigurationAttribute)(Assembly.GetExecutingAssembly().GetCustomAttributes(typeof(AssemblyConfigurationAttribute), false).FirstOrDefault())).Configuration);
+            Logger.Log(Encoding.UTF8.GetString(Convert.FromBase64String(((AssemblyConfigurationAttribute)(Assembly.GetExecutingAssembly().GetCustomAttributes(typeof(AssemblyConfigurationAttribute), false).FirstOrDefault())).Configuration.Trim())));
             Console.ForegroundColor = ConsoleColor.Red;
             Logger.Log("################# IMPORTANT #################");
             Console.ForegroundColor = r;
