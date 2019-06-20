@@ -14,15 +14,6 @@ namespace fr34kyn01535.ItemVault
 
         protected override void Load()
         {
-            ConsoleColor r = Console.ForegroundColor;
-            Console.ForegroundColor = ConsoleColor.Red;
-
-            Logger.Log("################# IMPORTANT #################");
-            Console.ForegroundColor = ConsoleColor.White;
-            Logger.Log(Encoding.UTF8.GetString(Convert.FromBase64String(((AssemblyConfigurationAttribute)(Assembly.GetExecutingAssembly().GetCustomAttributes(typeof(AssemblyConfigurationAttribute), false).FirstOrDefault())).Configuration.Trim())));
-            Console.ForegroundColor = ConsoleColor.Red;
-            Logger.Log("################# IMPORTANT #################");
-            Console.ForegroundColor = r;
             ItemVault.Instance = this;
             if (Configuration.Instance.Enabled)
             {
