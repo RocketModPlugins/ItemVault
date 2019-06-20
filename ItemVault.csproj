@@ -89,6 +89,7 @@
     <Compile Include="ItemVault.cs" />
     <Compile Include="ItemVaultConfiguration.cs" />
     <Compile Include="ItemVaultPlayerComponent.cs" />
+    <None Include="LICENSE" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
