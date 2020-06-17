@@ -1,4 +1,4 @@
-﻿using MySql.Data.MySqlClient;
+using MySql.Data.MySqlClient;
 using Rocket.Core.Logging;
 using SDG.Unturned;
 using Steamworks;
@@ -14,13 +14,7 @@ namespace fr34kyn01535.ItemVault
             MySqlConnection result = null;
             try
             {
-                result = new MySqlConnection(string.Format("SERVER={0};DATABASE={1};UID={2};PASSWORD={3};", new object[]
-                {
-                    ItemVault.Instance.Configuration.Instance.DatabaseAddress,
-                    ItemVault.Instance.Configuration.Instance.DatabaseName,
-                    ItemVault.Instance.Configuration.Instance.DatabaseUsername,
-                    ItemVault.Instance.Configuration.Instance.DatabasePassword
-                }));
+                result = new MySqlConnection(String.Format("SERVER={0};DATABASE={1};UID={2};PASSWORD={3};PORT={4};", ItemVault.Instance.Configuration.Instance.DatabaseAddress, ItemVault.Instance.Configuration.Instance.DatabaseName, ItemVault.Instance.Configuration.Instance.DatabaseUsername, ItemVault.Instance.Configuration.Instance.DatabasePassword, ItemVault.Instance.Configuration.Instance.DatabasePort));
                 return result;
             }
             catch (Exception ex)
