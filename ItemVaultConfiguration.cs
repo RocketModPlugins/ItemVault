@@ -1,4 +1,4 @@
-﻿using Rocket.API;
+using Rocket.API;
 using System;
 
 namespace fr34kyn01535.ItemVault
@@ -10,6 +10,7 @@ namespace fr34kyn01535.ItemVault
         public string DatabasePassword;
         public string DatabaseName;
         public string DatabaseTableName;
+        public string DatabasePort;
         public bool Enabled;
 
         public void LoadDefaults()
@@ -19,6 +20,7 @@ namespace fr34kyn01535.ItemVault
             DatabasePassword = "password";
             DatabaseName = "unturned";
             DatabaseTableName = "itemvault";
+            DatabasePort = "3306";
             Enabled = true;
         }
     }
